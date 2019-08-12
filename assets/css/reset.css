@@ -1,0 +1,211 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin-top: 15px;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+
+:focus {
+	outline: 0;
+}
+
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+
+ol, ul {
+	/* list-style: none; */
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+.loading {
+	text-align: center;
+}
+
+.product-grid {
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+	background-color: #e5e5e5;
+	height: 472px;
+	margin: 0px 10px 0px 10px;
+}
+
+.product-grid .product-image {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+
+.product-grid .product-image a {
+	display: block
+}
+
+.product-grid .product-image img {
+	width: auto;
+	height: auto
+}
+
+.product-grid .view-more, #showSelectedProduct .view-more {
+	color: #000;
+	background-color: #b7b7b7;
+	font-size: 15px;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0;
+	display: block;
+	left: 0;
+	border: 2px solid #727272;
+	width: 91%;
+	margin: auto;
+}
+
+.product-grid .view-more a, #showSelectedProduct .view-more a {
+	color: #000;
+	text-decoration: none;
+	font-size: larger;
+	font-weight: 600;
+}
+
+.product-grid:hover .view-more {
+	bottom: 0;
+}
+
+.product-grid .product-new-label {
+	background-color: #3498db;
+	color: #fff;
+	font-size: 17px;
+	padding: 5px 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all .3s
+}
+
+.product-grid:hover .product-new-label {
+	opacity: 0
+}
+
+.product-grid .product-content {
+	padding: 30px 10px;
+	text-align: center
+}
+
+#showSelectedProduct .title {
+	font-size: 20px;
+	margin: 0 0 7px;
+	font-weight: 600;
+}
+
+#showSelectedProduct .features {
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 0px;
+}
+
+.product-grid .title {
+	font-size: 14px;
+	margin: 0 0 7px;
+	height: 70px;
+	font-weight: 600;
+}
+
+.product-grid .title a {
+	color: #303030
+}
+
+.product-grid .title a:hover {
+	color: #3498db;
+}
+
+#showSelectedProduct .price {
+	padding-top: 66px;
+	text-align: center;
+}
+
+#showSelectedProduct .price span {
+	color: #303030;
+	font-weight: bolder;
+	font-size: 30px;
+}
+
+.product-grid .price {
+	color: #303030;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+#showSelectedProduct {
+	height: 0px;
+	display: none;
+}
+
+.overlay {
+	bottom: 0;
+	display: block!important;
+	height: 350px!important;
+	left: 0;
+	right: 0;
+	background-color: #e5e5e5;
+	overflow: hidden;
+	border: 2px solid #bfbfbf;
+	width: 100%;
+}
+
+@media screen and (max-width:990px) {
+	.product-grid {
+		margin-bottom: 30px
+	}
+	.container {
+		width: 750px!important;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 100%!important;
+	}
+	.product-grid {
+		height: 540px;
+	}
+	.product-grid .view-more a, #showSelectedProduct .view-more a{
+		font-size: 30px;
+	}
+	.product-grid .title {
+		font-size: 24px;
+		height: 91px;
+	}
+	.product-grid .price {
+		font-size: 31px;
+	}
+	.overlay {
+		height: 400px!important;
+	}
+}

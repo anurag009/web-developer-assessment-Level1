@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="description" content="Lowe's Assessment">
+   <title>[Your Name] - Interview Test</title>
+   <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js" async></script>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+   <!-- ko ifnot: loading -->
+   <div id="container" class="container">
+      <div id="showSelectedProduct">
+         <div data-bind="with:selectedProduct">
+            <div class="col-md-3 col-xs-3">
+               <img class="pic-1" data-bind="attr:{src: $data.imageUrls.md}">
+            </div>
+            <div class="col-md-6 col-xs-9">
+               <div class="product-discription">
+                  <h3 class="title" data-bind="text: $data.description"></h3>
+                  <ul data-bind="foreach: marketingBullets">
+                     <li class="features" data-bind="text:$data"></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-3 col-xs-12">
+               <button class="view-more" data-bind="click: $parent.handleAddToCart.bind($parent)">
+                  <a>Add To Cart</a>
+               </button>
+               <div class="price">
+                     <span data-bind="price: networkPrice"></span>
+               </div>
+              
+            </div>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-12">
+            <!-- ko foreach: productList -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+               <div class="product-grid">
+                  <div class="product-image">
+                     <a href="#">
+                        <img class="pic-1" data-bind="attr:{src: $data.imageUrls.md}">
+                     </a>
+                  </div>
+                  <div class="product-content">
+                     <h3 class="title" data-bind="text: $data.description"></h3>
+                     <span class="price" data-bind="price: networkPrice"></span>
+                  </div>
+                  <button class="view-more" data-bind="click: $parent.handleViewMore.bind($parent)">
+                     <a>View More</a>
+                  </button>
+               </div>
+            </div>
+            <!-- /ko -->
+         </div>
+      </div>
+   </div>
+   <!-- /ko -->
+   <!-- ko if: loading -->
+   <div class="loading">
+         <img  data-bind="attr:{src: './assets/images/4V0b.gif'}"/>
+   </div>
+
+   <!-- /ko -->
+   <script src="./src/main.js"></script>
+</body>
+
+</html>

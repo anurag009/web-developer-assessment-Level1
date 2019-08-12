@@ -1,0 +1,8 @@
+How to run a code:
+1. Install two npm packages at the folder location: "web-developer-assessment-Level1"
+	i) Express (npm install express)
+	ii)Request (npm install request)
+3. open cmd and set the execution path to the folder "web-developer-assessment-Level1".
+4. Run the server by the command : node server.js (this will start server at 3000 port localhost);
+Note: Server has been create due to CORS Error. Server to server call doesn't require cors and I created server which is cors enabled.
+5. Now directly open the product_list_page.html file on browser.
